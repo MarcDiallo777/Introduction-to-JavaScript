@@ -17,6 +17,15 @@ Do the following:
 
    HINT: no function required
 */
+const votingAge = 46;
+
+
+if (votingAge >= 18){
+console.log("true");
+} else {
+  console.log("you cant vote lol");
+}
+
 
 
 
@@ -30,7 +39,16 @@ Do the following:
 
    HINT: no function required
 */
+var num1 = 3;
+var num2 = 2;
 
+
+
+if (num1 < num2){
+  console.log(num1 + 1);
+} else {
+  console.log(num2 + 1);
+}
 
 
 
@@ -57,10 +75,12 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
+function multiply(num1, num2){
+  return num1 * num2;
+}
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
+console.log(multiply(2, 4));
+
 
 
 
@@ -73,10 +93,11 @@ Do the following:
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
 */
-
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
+
+console.log(dogYears(21));
 
 
 
@@ -133,12 +154,38 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
 function game(user, computer){
-    /*add your code here*/
+  if (user === computer){
+    return "It's a tie!";
+  } else if (user === "sicssors"){
+    if (computer === "paper"){
+      return "You win!";
+    } 
+  } else if (user === "rock"){
+    if (computer === "sicssors"){
+      return "You win!";
+    }
+  } else if (user === "paper"){
+    if (computer === "rock"){
+      return "You win!";
+    }
+  } else if (user === "paper"){
+    if (computer === "sicssors"){
+      return "You lose :( "
+    }
+  } else if (user === "sicssors"){
+    if (computer === "rock"){
+      return "You lose :( "
+    }
+  } else if (user === "rock"){
+    if (computer === "paper"){
+      return "You lose :( "
+    }
+  }
 }
-  
-  
+
+console.log(game("sicssors", "rock"));
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -151,11 +198,12 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km){
+  return km / 1.609;
 
+}
 
+console.log(miles(56));
 
 //Task 5b - Feet to CM
 /*
@@ -164,11 +212,12 @@ Using the feet function below do the following:
   2. Convert the number of cm to feet
   3. Return number of feet
 */
+function centi(cm){
+  return cm / 30.48;
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
+}
+
+console.log(centi(40));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -180,10 +229,11 @@ Using the annoyingSong function below do the following:
   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
+function annoyingSong(startNum){
+  return startNum + " bottles of soda on the wall " + startNum + " bottles of soda take one down pass it around " + startNum - 1 + " bottles of soda on the wall";
+}
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+console.log(annoyingSong(56));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -200,12 +250,23 @@ Using the grade function below do the following:
    60-69 should return 'you got a D'
    below should return 'you got an F'
 */
-  
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(gradeNum){
+  if (gradeNum <=60){
+    return "F";
+  } else if (gradeNum <=69){
+    return "D";
+  } else if (gradeNum <=79){
+    return "C";
+  } else if (gradeNum <=89){
+    return "B";{
+    }
+  } else if (gradeNum <=100){
+    return "A";
   }
-  
-  
+} 
+
+console.log(grade(90));
+
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
